@@ -160,9 +160,8 @@ module.exports.searchCourse = handleAsync(async (req, res, next) => {
 })
 
 module.exports.getAllCourses = handleAsync(async (req, res, next) => {
-    const courses = await Course.find({ published: true })
-        .populate("instructor", "-password")
-        .exec()
+    const { limit } = req.query
+    const courses = await Course.find({ published: true }).limit(limit).sort("-updatedAt").exec()
 
     if (courses.length == 0) return new JsonResponse(400).error(res, "Course Not Found")
 

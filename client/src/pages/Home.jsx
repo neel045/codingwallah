@@ -11,8 +11,27 @@ const Home = () => {
     const [searchQuery, setSearchQuery] = useSearchParams()
 
     useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                const res = await fetch(`/api/courses?limit=${5}`, {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                const json = await res.json()
+                if (json.status) {
+                    setCourses(json.data)
+                } else {
+                    setCourses([])
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
         const searchCourses = async () => {
-            if (searchQuery.get("searchQuery") == "") {
+            if (searchQuery.get("searchQuery") == "" || searchQuery.get("searchQuery") == null) {
+                fetchCourses()
                 return
             }
             try {
