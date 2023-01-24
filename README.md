@@ -2,7 +2,21 @@
 
 This is a educational plateform, where educators can sell their courses and students can learn about coding here on this plateform
 
-Live Demo: [MemoryBook](https://memory-book-client.netlify.app/)
+## Home page
+
+![image](https://user-images.githubusercontent.com/60743345/214257379-b0abeb87-403f-4dc3-af42-82a4d5fa79de.png)
+
+## Course Details
+
+![image](https://user-images.githubusercontent.com/60743345/214257693-4b17a6f1-693d-420b-920d-e4e7c0d75458.png)
+
+## Leaning
+
+![image](https://user-images.githubusercontent.com/60743345/214257505-7b34840c-9119-4250-996a-aac3f36e0eba.png)
+
+## Profile
+
+![image](https://user-images.githubusercontent.com/60743345/214257894-d820c270-e806-402f-85f5-411e7d763c63.png)
 
 -   [Getting Started](#getting-started)
     -   [Requirements](#)
